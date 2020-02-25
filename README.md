@@ -1,4 +1,4 @@
-# Helpful Scripts for BIO435
+# Helpful Scripts for BIOL435
 
 ## translate.py
 
