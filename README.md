@@ -9,6 +9,7 @@ Usage:
 ## reverseTranslateAlignment.py 
 
 Reverse translates a protein alignment into a codon alignment.  
+The fasta headers must be identical in both files.  
 Usage:  
 `reverseTranslateAlignment.py <PROTALN.fas> <DNA.fas> > <CODON.fas>`
 
