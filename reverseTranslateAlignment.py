@@ -1,4 +1,4 @@
-#! /usr/bin/eny python2.7
+#! /usr/bin/env python2.7
 
 import sys
 
@@ -15,8 +15,14 @@ def fasDict(i_f):
 
     return seq_dict
 
-aa_seqs = fasDict(sys.argv[1], True)
-nucl_seqs = fasDict(sys.argv[2], True)
+def printSeq(seq):
+  count = 0
+  while count <= len(seq):
+    print seq[count: count + 70]
+    count += 70
+
+aa_seqs = fasDict(sys.argv[1])
+nucl_seqs = fasDict(sys.argv[2])
 
 for head in nucl_seqs:
   n_seq = nucl_seqs[head]
