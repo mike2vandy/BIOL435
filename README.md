@@ -16,7 +16,7 @@ Usage:
 ## drawTree.py  
 
 This one is a weird one, it's held together by duct tape, definitely test it. 
-You will still have to call this script from its "home" and you'll have to call 'xvfb-run'.
+You will still have to call this script from its "home" and you'll have to call 'xvfb-run'.  
 Usage:  
 `xvfb-run python ~/software/BIOL435/drawTree.py <bipartitions_file> <outfile prefix>`  
 
