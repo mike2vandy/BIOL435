@@ -24,3 +24,15 @@ Usage:
 Example:
 
 `xvfb-run python ~/software/BIOL435/drawTree.py RAxML_bipartitions.codon ADRA_codon`    
+
+## calcSeqLen.py  
+
+Measures the length of sequences in a fasta file, outputs a tab delimited format with seq name and the length
+
+Usage:  
+`calcSeqLen.py <fasta> > <out.tab>`
+
+Example:
+
+calcSeqLen.py Trinity.fasta > trinityLens.tab
+
