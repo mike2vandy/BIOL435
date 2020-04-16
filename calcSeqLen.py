@@ -9,6 +9,7 @@ with open(sys.argv[1]) as f:
     line = line.strip()
     if line.startswith('>'):
       head = line.replace('>', '')
+      head = head.split()[0]
       seqs[head] = 0
     else:
       seqs[head] += len(line)
