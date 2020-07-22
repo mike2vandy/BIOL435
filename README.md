@@ -36,3 +36,13 @@ Example:
 
 calcSeqLen.py Trinity.fasta > trinityLens.tab
 
+## fas2phy.py  
+
+Converts a FASTA file into a PHYLIP format. 
+
+Usage:  
+`fas2phy.py <fasta> > <phylip>`
+
+Example:  
+
+fas2phy.py piwi.aln.fas > piwi.aln.phy
