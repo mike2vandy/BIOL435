@@ -46,3 +46,15 @@ Usage:
 Example:  
 
 fas2phy.py piwi.aln.fas > piwi.aln.phy
+
+## findGene.py
+
+Finds a gene of interest in an ensembl GTF, will print 5 genes up and downstream as a bed file for synteny purposes  
+
+Usage:  
+`findGene.py <gene name> <GTF file> > <region.bed>`
+
+Example:  
+
+findGene.py PIWIL4 Homo_sapiens.GRCh38.100.gtf.gz > homo.piwil4.region.bed
+
