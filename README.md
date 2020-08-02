@@ -58,3 +58,9 @@ Example:
 
 findGene.py PIWIL4 Homo_sapiens.GRCh38.100.gtf.gz > homo.piwil4.region.bed
 
+## makeConfig.py
+
+Makes a config.nex file needed for ExaBayes.  
+
+Usage:  
+makeConfig.py 
