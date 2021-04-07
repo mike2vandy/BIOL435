@@ -64,3 +64,14 @@ Makes a config.nex file needed for ExaBayes.
 
 Usage:  
 `makeConfig.py`
+
+## annotateORFs.py
+
+Adds the best Uniprot BLAST hit to each query sequence. A sequencing lacking a BLAST hit will not be returned.
+
+Usage:
+`annotateORFs.py <query.fasta> <blast.out> > <query_with_hits.fasta>`
+
+Example:
+
+annotateORFs.py longest_orfs.cds longest.orf.blast.out > referenceORFs.fas
