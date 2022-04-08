@@ -20,12 +20,12 @@ with open(sys.argv[2]) as f:
   for line in f:
     line = line.strip()
     fields = line.split()
-    query, hit, evalue, bit = fields[0], fields[1], fields[10], fields[11]
-    main = [hit, float(evalue), float(bit)]
-    if query in hits:
-      hits[query].append(main)
+    que, db, evalu, bit = fields[0], fields[1], float(fields[-2]), float(fields[-1])
+    specific = db.split('|')[2].split('_')[0]
+    if specific in hits:
+      hits[specific].append([que,evalu, bit])
     else:
-      hits[query] = [main]
+      hits[specific] = [[que, evalu, bit]]
 
 #go through parsed blast output
 #for each query, sort hits by evalue: low to high
@@ -33,10 +33,7 @@ with open(sys.argv[2]) as f:
 #Will only return orfs with a blast hit
 #unannotated ORFs will be discarded
 for i, j in hits.items():
-  j.sort(key = lambda x: x[1])
-  best = j[0]
-  anno = best[0].split('|')
-  swiss, gene = anno[1], anno[2].split('_')[0]
-  better = swiss + '|' + gene
-  print ">{}.{}\n{}".format(i, better, seqs[i])
+  j.sort(key = lambda x: x[2], reverse = True)
+  best = j[0][0]
+  print ">{}|{}\n{}".format(best, i, seqs[best])
 
